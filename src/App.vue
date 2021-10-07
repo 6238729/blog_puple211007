@@ -1,15 +1,13 @@
 <template>
 	<div>
 <!-- <div :class="containerClass" @click="onWrapperClick"> -->
+        <div>
         <EblogTopBar/>
 		<!-- @menu-toggle="onMenuToggle" /> -->
-			<div >
-			<!-- left menu -->
-			</div> 
-        <div class="container">
-            <div class="layout-main">
-                <router-view />
-            </div>
+          <Sidebar />
+          <div :style="{ 'margin-left': sidebarWidth }">
+            <router-view />
+          </div>
             <!-- <EblogFooter /> -->
         </div>
 	</div>
@@ -17,20 +15,17 @@
 
 <script>
 import EblogTopBar from './components/Elfinos1Topbar.vue';
-// import EblogMenu from './EblogMenu.vue';
-// import EblogConfig from './EblogConfig.vue';
-// import EblogFooter from './EblogFooter.vue';
-
-
+import Sidebar from './components/Elfinos2Sidebar.vue';
+import { sidebarWidth } from './components/state'
 
 export default {
-	components: {
-        'EblogTopBar': EblogTopBar,
-        // 'EblogMenu': EblogMenu,
-        // 'EblogConfig': EblogConfig,
-        // 'EblogFooter': EblogFooter,
+    components: { 
+        EblogTopBar,
+        Sidebar 
+    },
 
-
+    setup() {
+      return { sidebarWidth }
     }
    
 
