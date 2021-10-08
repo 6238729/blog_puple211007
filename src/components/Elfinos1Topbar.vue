@@ -8,9 +8,9 @@
 			<i class="pi pi-bars"></i>
 		</button>
 
-		<button class="p-link layout-topbar-menu-button layout-topbar-button">
-			<!-- v-styleclass="{ selector: '@next', enterClass: 'hidden', enterActiveClass: 'scalein', 
-			leaveToClass: 'hidden', leaveActiveClass: 'fadeout', hideOnOutsideClick: true}"> -->
+		<button class="p-link layout-topbar-menu-button layout-topbar-button"
+	:class="{ selector: '@next', enterClass: 'hidden', enterActiveClass: 'scalein', 
+			leaveToClass: 'hidden', leaveActiveClass: 'fadeout', hideOnOutsideClick: true}"> 
 			<i class="pi pi-ellipsis-v"></i> 
 		</button>
 		<ul class="layout-topbar-menu hidden lg:flex origin-top">
@@ -38,7 +38,7 @@
 
 
 <script>
-import {  } from 'vue';
+
 
 
 export default {

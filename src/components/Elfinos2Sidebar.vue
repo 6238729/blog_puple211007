@@ -1,3 +1,30 @@
+<template>
+  <div class="sidebar" :style="{ width: sidebarWidth }">
+    <h1>
+      <span v-if="collapsed">
+        <div>V</div>
+        <div>S</div>
+      </span>
+      <span v-else>Vue Sidebar</span>
+    </h1>
+
+    <SidebarLink to="/" icon="pi pi-home">Home</SidebarLink>
+    <SidebarLink to="/dashboard" icon="pi pi-star-o">게시글 목록1</SidebarLink>
+    <SidebarLink to="/analytics" icon="pi pi-moon">게시글 목록2</SidebarLink>
+    <SidebarLink to="/friends" icon="pi pi-sun">게시글 목록3</SidebarLink>
+    <SidebarLink to="/image" icon="pi pi-book">Images</SidebarLink>
+
+    <span
+      class="collapse-icon"
+      :class="{ 'rotate-180': collapsed }"
+      @click="toggleSidebar"
+    >
+      <i class="fas fa-angle-double-left" />
+    </span>
+  </div>
+</template>
+
+
 <script>
 import SidebarLink from './Elfinos3SidebarLink.vue'
 import { collapsed, toggleSidebar, sidebarWidth } from './state'
@@ -11,31 +38,6 @@ export default {
 }
 </script>
 
-<template>
-  <div class="sidebar" :style="{ width: sidebarWidth }">
-    <h1>
-      <span v-if="collapsed">
-        <div>V</div>
-        <div>S</div>
-      </span>
-      <span v-else>Vue Sidebar</span>
-    </h1>
-
-    <SidebarLink to="/" icon="pi pi-home">Home</SidebarLink>
-    <SidebarLink to="/dashboard" icon="pi pi-star-o">Dashboard</SidebarLink>
-    <SidebarLink to="/analytics" icon="pi pi-moon">Analytics</SidebarLink>
-    <SidebarLink to="/friends" icon="pi pi-sun">Friends</SidebarLink>
-    <SidebarLink to="/image" icon="pi pi-book">Images</SidebarLink>
-
-    <span
-      class="collapse-icon"
-      :class="{ 'rotate-180': collapsed }"
-      @click="toggleSidebar"
-    >
-      <i class="fas fa-angle-double-left" />
-    </span>
-  </div>
-</template>
 
 <style>
 :root {
