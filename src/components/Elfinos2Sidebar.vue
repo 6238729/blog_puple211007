@@ -21,11 +21,11 @@ export default {
       <span v-else>Vue Sidebar</span>
     </h1>
 
-    <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
-    <SidebarLink to="/dashboard" icon="fas fa-columns">Dashboard</SidebarLink>
-    <SidebarLink to="/analytics" icon="fas fa-chart-bar">Analytics</SidebarLink>
-    <SidebarLink to="/friends" icon="fas fa-users">Friends</SidebarLink>
-    <SidebarLink to="/image" icon="fas fa-image">Images</SidebarLink>
+    <SidebarLink to="/" icon="pi pi-home">Home</SidebarLink>
+    <SidebarLink to="/dashboard" icon="pi pi-star-o">Dashboard</SidebarLink>
+    <SidebarLink to="/analytics" icon="pi pi-moon">Analytics</SidebarLink>
+    <SidebarLink to="/friends" icon="pi pi-sun">Friends</SidebarLink>
+    <SidebarLink to="/image" icon="pi pi-book">Images</SidebarLink>
 
     <span
       class="collapse-icon"
@@ -39,8 +39,8 @@ export default {
 
 <style>
 :root {
-  --sidebar-bg-color: #3a035f;
-  --sidebar-item-hover: #8338a1;
+  --sidebar-bg-color: #7b61d1;
+  --sidebar-item-hover: #2d2269;
   --sidebar-item-active: #582767;
 }
 </style>
@@ -52,16 +52,21 @@ export default {
 
   float: left;
   position: fixed;
-  z-index: 1;
-  top: 4.8rem;
-  left: 0.5em;
-  bottom: 0rem;
-  padding: 0.5em;
-
+  z-index: 999;
+  top: 7rem;
+  left: 2rem;
+  bottom: 2.4rem;
+  padding: 1.5em;
+  
   transition: 0.3s ease;
 
   display: flex;
   flex-direction: column;
+
+  border-top-left-radius: 12px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 12px;
 }
 
 .sidebar h1 {

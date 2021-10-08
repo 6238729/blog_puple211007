@@ -4,10 +4,14 @@
         <div>
         <EblogTopBar/>
 		<!-- @menu-toggle="onMenuToggle" /> -->
+        <div class="layout-main-container">
+          <div class="layout-main">
           <Sidebar />
           <div :style="{ 'margin-left': sidebarWidth }">
             <router-view />
           </div>
+          </div>
+    </div>
             <!-- <EblogFooter /> -->
         </div>
 	</div>
@@ -34,24 +38,18 @@ export default {
 
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.layout-main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    padding: 7rem 2rem 2rem 4rem;
+    /* transition: margin-left $transitionDuration; */
+    background-color: #f3eff9;
 }
 
-#nav {
-  padding: 30px;
+.layout-main {
+    flex: 1 1 auto;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
