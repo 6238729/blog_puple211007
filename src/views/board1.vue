@@ -16,16 +16,16 @@
 
 			<!-- 리스트로 보기 -->
 			<template  #list="listview">
-				<div><b>{{listview.data.id}}</b></div>
+				<div><b>{{listview.data.category}}</b></div>
 				<div class="p-col-12">
 					<div class="product-list-item">
 						<div class="product-list-detail">
-							<div class="product-name">{{listview.data.name}}</div>
-							<div class="product-description">{{listview.data.description}}</div>							
-							<i class="pi pi-tag product-category-icon"></i><span class="product-category">{{listview.data.category}}</span>
+							<div class="product-name">{{listview.data.id}}</div>
+							<div class="product-description">{{listview.data.date}}</div>							
+							<i class="pi pi-tag product-category-icon"></i><span class="product-category">{{listview.data.description}}</span>
 						</div>
 						<div class="product-list-action">
-							<span class="product-price">${{listview.data.price}}</span>
+							<span class="product-price">{{listview.data.title}}</span>
 						</div>
 					</div>
 				</div>
@@ -37,7 +37,7 @@
 <script>
 import { onMounted } from "vue";
 import DataView from 'primevue/dataview';
-import carData from '../../public/data/cars.json';
+import carData from '../../public/cars.json';
 
 export default {
 	components: {
