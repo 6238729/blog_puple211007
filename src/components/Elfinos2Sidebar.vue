@@ -63,7 +63,7 @@ export default {
   display: flex;
   flex-direction: column;
 
-  border-top-left-radius: 12px;
+    border-top-left-radius: 12px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 12px;
